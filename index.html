@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Bridge Contracting LLC | Luxury Villa Construction Dubai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="City Bridge Contracting LLC - Luxury villa construction, renovation, and maintenance in Dubai, UAE. G+1 licensed contractor with 120+ completed villas and 30+ years of combined experience.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #050507;
+      --bg-section: #0c0e12;
+      --bg-card: #141720;
+      --gold: #d4af37;
+      --gold-soft: #e3c468;
+      --text-main: #f5f5f5;
+      --text-muted: #b3b3b3;
+      --border-soft: rgba(212, 175, 55, 0.25);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+      --radius-xl: 24px;
+      --transition-fast: 0.25s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #161926 0, #050507 45%, #000000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 6rem 0;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 0;
+      }
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(5, 5, 7, 0.96), rgba(5, 5, 7, 0.7));
+      border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, var(--gold-soft), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px #000, 0 0 25px rgba(212, 175, 55, 0.65);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #050507;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.4rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.26), rgba(9, 9, 13, 0.95));
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      color: var(--gold-soft);
+    }
+
+    .nav-cta span {
+      font-size: 0.9rem;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(212, 175, 55, 0.35);
+    }
+
+    .burger {
+      display: none;
+      width: 26px;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .burger span {
+      height: 2px;
+      border-radius: 20px;
+      background: var(--text-main);
+      transition: var(--transition-fast);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        position: fixed;
+        inset: 0 0 auto 0;
+        top: 64px;
+        background: rgba(5, 5, 7, 0.98);
+        padding: 1.5rem 1.5rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition-fast);
+      }
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .nav-cta {
+        width: 100%;
+        justify-content: center;
+      }
+      .burger {
+        display: flex;
+      }
+    }
+
+    .burger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Hero */
+    .hero {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.7rem;
+      color: var(--gold-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-soft), transparent);
+    }
+
+    .hero-title {
+      font-size: 2.9rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span.highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2.1rem;
+      }
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      max-width: 30rem;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .metric-value {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .metric-value span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-left: 0.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #050507;
+      box-shadow: 0 14px 32px rgba(212, 175, 55, 0.45);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.55);
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      border-color: rgba(212, 175, 55, 0.4);
+      background: rgba(8, 10, 16, 0.85);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(212, 175, 55, 0.08);
+      border-color: rgba(212, 175, 55, 0.8);
+    }
+
+    .hero-secondary-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    .hero-visual {
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.12), rgba(3, 4, 6, 0.98));
+      border: 1px solid var(--border-soft);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-corner {
+      position: absolute;
+      top: 1.3rem;
+      right: 1.2rem;
+      padding: 0.45rem 0.9rem;
+      background: rgba(5, 5, 7, 0.86);
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.65);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--gold-soft));
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.9);
+    }
+
+    .hero-card-main {
+      border-radius: 20px;
+      background: rgba(5, 6, 12, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 1.3rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero-card-main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-card-main h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card-main p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .villa-outline {
+      border-radius: 18px;
+      border: 1px dashed rgba(212, 175, 55, 0.45);
+      padding: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .villa-outline-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.78rem;
+    }
+
+    .villa-label {
+      color: var(--text-muted);
+    }
+
+    .villa-value {
+      color: var(--gold-soft);
+      font-weight: 500;
+    }
+
+    .mini-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--text-muted);
+    }
+
+    /* Section headings */
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+      color: var(--gold-soft);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-card {
+      padding: 1.6rem;
+      border-radius: var(--radius-xl);
+      background: var(--bg-section);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .about-highlight {
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 1.4rem;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.22), rgba(6, 7, 11, 0.9));
+      font-size: 0.86rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .pill {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      background: rgba(5, 5, 7, 0.86);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Services */
+    .services {
+      background: radial-gradient(circle at top, #151720 0, #050507 50%, #000000 100%);
+    }
+
+    .services-grid {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.7rem;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      border-radius: 20px;
+      background: var(--bg-card);
+      border: 1px solid rgba(212, 175, 55, 0.24);
+      padding: 1.5rem 1.4rem;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+      transition: var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.23), transparent 55%);
+      transition: opacity var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.7);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-soft);
+      margin-bottom: 0.55rem;
+    }
+
+    .service-title {
+      font-size: 1.02rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .service-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Projects */
+    .projects-grid {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-main-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), rgba(3, 3, 5, 0.96));
+      padding: 1.6rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bg-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      background: rgba(255, 255, 255, 0.86);
+      border-radius: 999px;
+      align-self: flex-start;
+    }
+
+    .project-tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .project-subtext {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .project-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .project-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .project-stat {
+      padding: 0.7rem 0.8rem;
+      border-radius: 14px;
+      background: rgba(5, 6, 12, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .project-stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .project-stat-value {
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--gold-soft);
+    }
+
+    .project-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .projects-list-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(212, 175, 55, 0.24);
+      background: rgba(8, 9, 14, 0.96);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .project-row {
+      padding: 0.7rem 0.6rem;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .project-row-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .project-row-title {
+      font-size: 0.9rem;
+    }
+
+    .project-row-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .project-row-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    /* Why Us */
+    .why-grid {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 650px) {
+      .why-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .why-item {
+      border-radius: 18px;
+      background: var(--bg-card);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1.1rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .why-item-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-main);
+    }
+
+    .why-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .why-highlight-card {
+      border-radius: 20px;
+      padding: 1.4rem 1.3rem;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), rgba(6, 7, 12, 0.95));
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      font-size: 0.84rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .inline-check {
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-muted);
+    }
+
+    .check-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--gold-soft);
+    }
+
+    /* Contact */
+    .contact {
+      background: radial-gradient(circle at top, #171827 0, #050507 50%, #000000 100%);
+    }
+
+    .contact-grid {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      background: rgba(6, 7, 12, 0.97);
+      padding: 1.7rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-soft);
+    }
+
+    .contact-value a {
+      color: var(--text-main);
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      font-size: 0.85rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .field label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      background: rgba(5, 5, 7, 0.96);
+      padding: 0.7rem 0.8rem;
+      color: var(--text-main);
+      font: inherit;
+      outline: none;
+      transition: var(--transition-fast);
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #666a75;
+      font-size: 0.8rem;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(212, 175, 55, 0.9);
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.5);
+    }
+
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      align-items: center;
+    }
+
+    .tiny-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .whatsapp-floating {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 60;
+    }
+
+    .wa-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 211, 102, 0.9);
+      background: radial-gradient(circle at top left, #43e28f, #128c7e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .wa-btn span {
+      font-size: 1.6rem;
+      color: #ffffff;
+    }
+
+    .wa-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.9);
+    }
+
+    .wa-tooltip {
+      position: absolute;
+      right: 64px;
+      bottom: 14px;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(5, 5, 7, 0.96);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .wa-tooltip {
+        display: none;
+      }
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 1.5rem 0 2.2rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-soft);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <div class="branding">
+            <div class="logo-mark">CB</div>
+            <div class="brand-text">
+              <div class="brand-name">City Bridge Contracting LLC</div>
+              <div class="brand-tagline">Luxury Villa Construction · Dubai, UAE</div>
+            </div>
+          </div>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact">Contact</a>
+            <button class="nav-cta" onclick="scrollToSection('contact')">
+              REQUEST QUOTE <span>→</span>
+            </button>
+          </nav>
+
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div>
+              <div class="hero-kicker">Since 2004 · Dubai, United Arab Emirates</div>
+              <h1 class="hero-title">
+                Luxury <span class="highlight">villa construction</span>
+                with engineering-grade precision.
+              </h1>
+              <p class="hero-subtitle">
+                City Bridge Contracting LLC designs and builds high-quality villas and residential projects across Dubai and the UAE — combining structural expertise with premium finishes, on-time delivery, and transparent project control.
+              </p>
+
+              <div class="hero-metrics">
+                <div class="metric">
+                  <div class="metric-label">Completed Villas</div>
+                  <div class="metric-value">120+<span>turnkey projects</span></div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Experience</div>
+                  <div class="metric-value">30+<span>years combined</span></div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">License</div>
+                  <div class="metric-value">G+1<span>Dubai approved</span></div>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="scrollToSection('contact')">
+                  Request a project quote
+                </button>
+                <button class="btn-ghost" onclick="window.location.href='tel:+971503515565'">
+                  Call project manager
+                </button>
+              </div>
+              <p class="hero-secondary-note">
+                From structural design to handover — one engineering team, one point of responsibility.
+              </p>
+            </div>
+
+            <div class="hero-visual">
+              <div class="badge-corner">
+                <span class="badge-dot"></span>
+                Active Projects · Dubai
+              </div>
+
+              <div class="hero-card-main">
+                <div>
+                  <h3>Signature Villa Delivery</h3>
+                  <p>
+                    Full construction package including structure, MEP coordination, exterior works, and finishing — supervised by experienced engineers and site managers.
+                  </p>
+                </div>
+                <div class="villa-outline">
+                  <div class="villa-outline-row">
+                    <span class="villa-label">Project Type</span>
+                    <span class="villa-value">Luxury G+1 Villa</span>
+                  </div>
+                  <div class="villa-outline-row">
+                    <span class="villa-label">Location</span>
+                    <span class="villa-value">Dubai, UAE</span>
+                  </div>
+                  <div class="villa-outline-row">
+                    <span class="villa-label">Status</span>
+                    <span class="villa-value">Ongoing · Handover Q4</span>
+                  </div>
+                  <div class="mini-chips">
+                    <span class="chip">Structural Design & Execution</span>
+                    <span class="chip">Authority Approvals</span>
+                    <span class="chip">Site Supervision</span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- hero-visual -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">About City Bridge</div>
+            <h2 class="section-title">An experienced contracting team focused on villas.</h2>
+            <p class="section-subtitle">
+              Established in 2004, City Bridge Contracting LLC has delivered over 120 villa projects in Dubai and the UAE — with a dedicated team of engineers, supervisors, and skilled workers focused on quality and compliance.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <p>
+                As a licensed <strong>G+1 contractor in Dubai</strong>, we specialize in the full lifecycle of villa construction — from excavation and foundation works to finishing and external landscaping. Our engineers coordinate closely with consultants, authorities, and suppliers to keep every project aligned with drawings, specifications, and local regulations.
+              </p>
+              <br />
+              <p>
+                Our approach is simple: <strong>clear timelines, transparent communication, and engineering-grade execution.</strong> Whether it is a ground-up villa or a complex renovation, we treat each project as a long-term reference for our company — and we build it accordingly.
+              </p>
+            </div>
+
+            <div class="about-highlight">
+              <div>
+                <strong>Core capabilities</strong>
+                <div class="pill-row">
+                  <span class="pill">Turnkey Villa Construction</span>
+                  <span class="pill">Structural & Civil Works</span>
+                  <span class="pill">Renovation & Extensions</span>
+                  <span class="pill">Maintenance & Modifications</span>
+                  <span class="pill">Servant Quarters & Annexes</span>
+                </div>
+              </div>
+              <div>
+                <strong>Where we operate</strong>
+                <div class="pill-row">
+                  <span class="pill">Dubai</span>
+                  <span class="pill">Other Emirates (on request)</span>
+                </div>
+              </div>
+              <div>
+                <strong>How we work</strong>
+                <div class="pill-row">
+                  <span class="pill">Direct owner coordination</span>
+                  <span class="pill">Dedicated site engineer</span>
+                  <span class="pill">Regular progress updates</span>
+                  <span class="pill">Authority-compliant execution</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Services</div>
+            <h2 class="section-title">End-to-end villa contracting services.</h2>
+            <p class="section-subtitle">
+              One team to manage design coordination, civil works, structural execution, and finishing — so you don’t have to deal with multiple contractors.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-label">01 · Turnkey villas</div>
+              <h3 class="service-title">New Villa Construction</h3>
+              <p class="service-desc">
+                Complete construction from excavation to handover — including structure, blockwork, plaster, waterproofing, and external works as per approved drawings and consultant instructions.
+              </p>
+              <div class="service-meta">
+                <span>G+1 structures</span>
+                <span>Authority-compliant</span>
+                <span>Progress-based billing</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-label">02 · Renovation</div>
+              <h3 class="service-title">Renovation & Extensions</h3>
+              <p class="service-desc">
+                Structural modifications, extensions, layout changes, and façade upgrades for existing villas — executed safely with proper method statements and approvals.
+              </p>
+              <div class="service-meta">
+                <span>Structural checks</span>
+                <span>Phased execution</span>
+                <span>Occupied villas possible</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-label">03 · Finishing</div>
+              <h3 class="service-title">Interior & Exterior Finishes</h3>
+              <p class="service-desc">
+                High-quality tiling, painting, false ceilings, feature walls, and external cladding — coordinated with your interior designer or consultant.
+              </p>
+              <div class="service-meta">
+                <span>Premium finishes</span>
+                <span>Mock-ups before approval</span>
+                <span>Detail-oriented teams</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-label">04 · Maintenance</div>
+              <h3 class="service-title">Villa Maintenance & Repairs</h3>
+              <p class="service-desc">
+                Civil and structural repairs, crack treatment, waterproofing solutions, and corrective works for existing residential properties.
+              </p>
+              <div class="service-meta">
+                <span>Diagnosis first</span>
+                <span>Long-term solutions</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-label">05 · Annexes</div>
+              <h3 class="service-title">Servant Quarters & Outbuildings</h3>
+              <p class="service-desc">
+                Construction of servant quarters, guard rooms, drivers’ rooms, and small annex buildings that match the main villa aesthetics.
+              </p>
+              <div class="service-meta">
+                <span>Optimized layouts</span>
+                <span>Efficient footprint</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-label">06 · Support</div>
+              <h3 class="service-title">Engineering & Coordination</h3>
+              <p class="service-desc">
+                Support with structural details, shop drawings, site coordination with MEP teams, and liaison with consultants/authorities during execution.
+              </p>
+              <div class="service-meta">
+                <span>Engineer-led</span>
+                <span>Clear documentation</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Selected work</div>
+            <h2 class="section-title">Villas that speak for our engineering.</h2>
+            <p class="section-subtitle">
+              Below is a sample layout of the type of villas we deliver. We can customize the external finishes and interior concept based on your architect and interior designer.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-main-card">
+              <div class="project-tag">
+                <span class="project-tag-dot"></span> G+1 Signature Villa
+              </div>
+              <div>
+                <h3 class="project-title">Corner plot family villa · Dubai</h3>
+                <p class="project-subtext">
+                  4-bedroom G+1 villa with majlis, double-height entrance lobby, open living/dining, and integrated indoor-outdoor spaces designed for family living.
+                </p>
+              </div>
+
+              <div class="project-stats">
+                <div class="project-stat">
+                  <span class="project-stat-label">Built-up area</span>
+                  <span class="project-stat-value">4,500 sq.ft</span>
+                </div>
+                <div class="project-stat">
+                  <span class="project-stat-label">Scope</span>
+                  <span class="project-stat-value">Structure to handover</span>
+                </div>
+                <div class="project-stat">
+                  <span class="project-stat-label">Duration</span>
+                  <span class="project-stat-value">12–14 months</span>
+                </div>
+              </div>
+
+              <p class="project-note">
+                *Actual project photos and references can be shared during the meeting or site visit, subject to client approval and privacy.
+              </p>
+            </div>
+
+            <div class="projects-list-card">
+              <div class="project-row">
+                <div class="project-row-main">
+                  <div class="project-row-title">Private villa – Dubai</div>
+                  <div class="project-row-meta">Turnkey construction · G+1 · Structured payment schedule</div>
+                </div>
+                <div class="project-row-badge">Completed</div>
+              </div>
+
+              <div class="project-row">
+                <div class="project-row-main">
+                  <div class="project-row-title">Villa renovation & façade upgrade</div>
+                  <div class="project-row-meta">Structural modifications · New façade · Interior refresh</div>
+                </div>
+                <div class="project-row-badge">Delivered</div>
+              </div>
+
+              <div class="project-row">
+                <div class="project-row-main">
+                  <div class="project-row-title">Servant quarters & annex</div>
+                  <div class="project-row-meta">Annex building · Matching main villa elevation</div>
+                </div>
+                <div class="project-row-badge">Ongoing</div>
+              </div>
+
+              <p class="project-note">
+                To see more reference work, please get in touch and we will arrange a project portfolio presentation or site visit based on availability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section id="why-us">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Why choose City Bridge</div>
+            <h2 class="section-title">Engineering-driven quality, not just contracting.</h2>
+            <p class="section-subtitle">
+              We combine experienced engineers, clear documentation, and disciplined site management to protect your investment and deliver the villa you actually expect.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-list">
+              <div class="why-item">
+                <div class="why-tag">01</div>
+                <div class="why-item-title">Licensed & experienced</div>
+                <p>
+                  G+1 licensed contractor with more than 120 delivered villas and over 30 years of combined engineering experience in the UAE market.
+                </p>
+              </div>
+              <div class="why-item">
+                <div class="why-tag">02</div>
+                <div class="why-item-title">Owner-focused approach</div>
+                <p>
+                  Direct coordination with the owner and their consultant, with regular progress updates, site visits, and transparent communication.
+                </p>
+              </div>
+              <div class="why-item">
+                <div class="why-tag">03</div>
+                <div class="why-item-title">Quality & compliance</div>
+                <p>
+                  Works are executed in line with approved drawings, local authority requirements, and good engineering practice — not shortcuts.
+                </p>
+              </div>
+              <div class="why-item">
+                <div class="why-tag">04</div>
+                <div class="why-item-title">Clear timeline & payments</div>
+                <p>
+                  Realistic construction program and milestone-based payment schedules that align with progress on site.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-highlight-card">
+              <h3>What you can expect from us</h3>
+              <p>
+                From the first call, our objective is to understand your plot, drawings, budget, and timing — then propose a construction strategy that balances quality, cost, and speed.
+              </p>
+              <div class="inline-check">
+                <span class="check-dot">✓</span>
+                Clear BOQ, scope, and contractual terms.
+              </div>
+              <div class="inline-check">
+                <span class="check-dot">✓</span>
+                Dedicated site engineer and supervisor.
+              </div>
+              <div class="inline-check">
+                <span class="check-dot">✓</span>
+                Support with inspections and approvals.
+              </div>
+              <div class="inline-check">
+                <span class="check-dot">✓</span>
+                Professional handover process.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Contact</div>
+            <h2 class="section-title">Discuss your villa or renovation project.</h2>
+            <p class="section-subtitle">
+              Share your plot location, drawings (if available), and target timeline — our engineering team will review and get back to you with the next steps.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-row">
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">
+                  <a href="tel:+971503515565">+971 50 351 5565</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">
+                  <a href="https://wa.me/971552773556" target="_blank" rel="noopener">+971 55 277 3556</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:citybridgellc@gmail.com">citybridgellc@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">
+                  Dubai, United Arab Emirates
+                </div>
+              </div>
+              <p class="contact-note">
+                You can send us your drawings, plot details, and requirements by email or WhatsApp. We will review and propose suitable options for construction and timelines.
+              </p>
+            </div>
+
+            <div class="contact-card">
+              <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" placeholder="Your full name" required />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input id="phone" type="tel" placeholder="Preferred contact number" required />
+                </div>
+                <div class="field">
+                  <label for="project-type">Project type</label>
+                  <input id="project-type" type="text" placeholder="New villa / renovation / annex / other" />
+                </div>
+                <div class="field">
+                  <label for="message">Brief details</label>
+                  <textarea id="message" placeholder="Plot location, approximate built-up area, and any important notes."></textarea>
+                </div>
+
+                <div class="contact-actions">
+                  <button type="submit" class="btn-primary">
+                    Prepare my project callback
+                  </button>
+                  <button type="button" class="btn-ghost" onclick="openWhatsAppFromForm()">
+                    Send via WhatsApp
+                  </button>
+                </div>
+                <p class="tiny-note">
+                  This form does not send emails directly — it prepares a formatted message for WhatsApp so your details reach us quickly.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <div class="whatsapp-floating" onclick="openWhatsAppQuick()">
+      <div class="wa-tooltip">Chat with City Bridge on WhatsApp</div>
+      <div class="wa-btn">
+        <span>💬</span>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>© <span id="year"></span> City Bridge Contracting LLC. All rights reserved.</div>
+          <div class="footer-links">
+            <a href="#home">Back to top</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll helper
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // Mobile nav toggle
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+
+    if (burger) {
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          burger.classList.remove("open");
+          navLinks.classList.remove("open");
+        });
+      });
+    }
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // WhatsApp helpers
+    function buildWhatsAppMessage() {
+      const name = document.getElementById("name")?.value || "";
+      const phone = document.getElementById("phone")?.value || "";
+      const projectType = document.getElementById("project-type")?.value || "";
+      const message = document.getElementById("message")?.value || "";
+
+      const text = `Hello City Bridge,%0A%0AI would like to discuss a project.%0A%0AName: ${name}%0APhone/WhatsApp: ${phone}%0AProject type: ${projectType}%0ADetails: ${message}%0A%0AThank you.`;
+      return text;
+    }
+
+    function openWhatsAppFromForm() {
+      const waNumber = "971552773556";
+      const url = `https://wa.me/${waNumber}?text=${buildWhatsAppMessage()}`;
+      window.open(url, "_blank");
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      openWhatsAppFromForm();
+    }
+
+    function openWhatsAppQuick() {
+      const waNumber = "971552773556";
+      const url = `https://wa.me/${waNumber}?text=Hello City Bridge, I would like to discuss a villa or renovation project.`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
